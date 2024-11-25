@@ -35,7 +35,7 @@ gL = 10.0e-9;
 a = 2.0e-9;
 
 %I_sra Current Step
-b = 2.0e-2;
+b = 2.0e-11;
 
 %Time Constant For G_sra
 T_sra = 0.2;
