@@ -6,7 +6,7 @@ close all;
 clc;
 
 %Choices Are Question Tasks 2,3,4,5, And 6
-Task = '2';
+Task = '6';
 
 %Time Parameters
 %Time Step (ms)
@@ -203,7 +203,8 @@ figure(1)
 
 subplot(2,1,1)
 plot(time(10:10:end), 1e9 * I_app(10:10:end))
-title('Applied Current')
+Title_Str = ['Task ', Task, ' Applied Current'];
+title(Title_Str)
 xlabel('Time (ms)')
 ylabel('I app (nA)')
 axis([0 T -0.5 1.05])
@@ -211,7 +212,8 @@ hold on
 
 subplot(2,1,2)
 plot(time(10:10:end), 1e3 * V(10:10:end))
-title('Membrane Potential')
+Title_Str2 = ['Task ', Task, ' Membrane Potential'];
+title(Title_Str2)
 xlabel('Time (ms)')
 ylabel('V m (mV)')
 
