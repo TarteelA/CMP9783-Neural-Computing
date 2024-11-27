@@ -6,7 +6,7 @@ close all;
 clc;
 
 %Choices Are Question Tasks 2,3,4,5, And 6
-Task = '6';
+Task = '2';
 
 %Time Parameters
 %Time Step (ms)
