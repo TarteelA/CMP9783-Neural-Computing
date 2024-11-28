@@ -161,7 +161,7 @@ ISI_indes = find(Start_rate);
 plot(1e12 * I_app(ISI_indes), Start_rate(ISI_indes), 'o');
 
 ISI_indes = find(Single_spike);
-plot(1e12 * I_app(ISI_indes), 0 * Single_spike(ISI_indes), '*k');
+plot(1e12 * I_app(ISI_indes), 0 * Single_spike(ISI_indes), 'sk');
 
 xlabel('I app (nA)');
 ylabel('Spike Rate (Hz)');
