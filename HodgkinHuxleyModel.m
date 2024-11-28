@@ -203,7 +203,7 @@ figure(1)
 
 subplot(2,1,1)
 plot(time(10:10:end), 1e9 * I_app(10:10:end))
-Title_Str = ['Task ', Task, ' Applied Current'];
+Title_Str = ['Task ', Task, newline, ' Applied Current'];
 title(Title_Str)
 xlabel('Time (ms)')
 ylabel('I app (nA)')
@@ -212,7 +212,7 @@ hold on
 
 subplot(2,1,2)
 plot(time(10:10:end), 1e3 * V(10:10:end))
-Title_Str2 = ['Task ', Task, ' Membrane Potential'];
+Title_Str2 = 'Membrane Potential';
 title(Title_Str2)
 xlabel('Time (ms)')
 ylabel('V m (mV)')

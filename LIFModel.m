@@ -96,7 +96,7 @@ T = 5;
 %Time Vector (ms)
 t = 0:dt:T; 
 
-%Applied Current Of 500 (pA)
+%Applied Current (pA)
 I_app = 240:5:550;
 I_app = I_app * 1e-12;
 
@@ -117,7 +117,7 @@ for j = 1:length(I_app)
     %Spike Rate Adaptation Conductunce
     G_sra = zeros(1, length(t));
 
-    %Initialize Spike Train
+    %Initialize Spikes
     Spikes = zeros(size(t));
 
     %Time Vector Simulation Loop
