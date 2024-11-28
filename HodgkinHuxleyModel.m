@@ -203,7 +203,7 @@ figure(1)
 
 subplot(2,1,1)
 plot(time(10:10:end), 1e9 * I_app(10:10:end))
-Title_Str = ['Task ', Task, newline, ' Applied Current'];
+Title_Str = ['Task ', Task, newline, 'Applied Current'];
 title(Title_Str)
 xlabel('Time (ms)')
 ylabel('I app (nA)')
