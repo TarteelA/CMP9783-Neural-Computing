@@ -14,7 +14,7 @@ T = 1.5;
 %Time Vector (ms)
 t = 0:dt:T;  
 
-%LIF Neuron Parameters
+%AELIF Neuron Parameters
 %Leak Reversal Potential (mV)
 E_L = -75.0e-3;
 
