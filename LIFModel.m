@@ -102,8 +102,8 @@ T = 5;
 t = 0:dt:T; 
 
 %Applied Current (pA)
-I_app = 0:5:550;
-I_app = I_app * 1e-12;
+I_app = 0:0.005:0.55;
+I_app = I_app * 1e-9;
 
 %Array For Storing 1/First ISI
 Start_rate = zeros(size(I_app));
@@ -160,13 +160,13 @@ end
 hold on;
 
 %Plot Applied Current And Spike Rate
-plot(I_app * 1e12, Last_rate);
+plot(I_app * 1e9, Last_rate);
 
 ISI_indes = find(Start_rate);
-plot(1e12 * I_app(ISI_indes), Start_rate(ISI_indes), 'o');
+plot(1e9 * I_app(ISI_indes), Start_rate(ISI_indes), 'o');
 
 ISI_indes = find(Single_spike);
-plot(1e12 * I_app(ISI_indes), 0 * Single_spike(ISI_indes), 'sk');
+plot(1e9 * I_app(ISI_indes), 0 * Single_spike(ISI_indes), 'sk');
 
 xlabel('I app (nA)');
 ylabel('Spike Rate (Hz)');
