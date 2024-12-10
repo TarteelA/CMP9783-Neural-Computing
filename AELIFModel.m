@@ -1,3 +1,5 @@
+%Author: Tarteel Alkaraan (25847208)
+%Last Updated: 01/12/2024
 %Adaptive Exponential Leaky Integrate And Fire Model
 %Part A: Simulate Mode Neuron For 1.5s With Current Pulse Of Iapp:500pA From 0.5s Until 1.0s
 %Clear Previous Runs And Environment
@@ -43,7 +45,7 @@ gL = 10.0e-9;
 a = 2.0e-9;
 
 %I_sra Current Step
-b = 2.0e-11;
+b = 0.02e-9;
 
 %Time Constant For G_sra
 T_sra = 0.2;
@@ -78,12 +80,14 @@ plot(t, 1e12 * I_app);
 xlabel('Time (s)');
 ylabel('I app (pA)');
 title('Applied Current');
+grid on;
 
 subplot(2,1,2);
 plot(t, 1000 * V);
 xlabel('Time (s)');
 ylabel('V m (mV)');
 title('Membrane Potential');
+grid on;
 figure();
 
 %Part B: Simulate Model For 5s With Range Of 20 Different Levels Of Constant Applied Current
@@ -95,8 +99,8 @@ T = 5;
 %Time Vector (ms)
 t = 0:dt:T;  
 
-%Applied Current Of 500 (pA)
-I_app = 240:5:550;
+%Applied Current (pA)
+I_app = 0:5:550;
 I_app = I_app * 1e-12;
 
 %Array For Storing 1/First ISI
@@ -168,6 +172,7 @@ ylabel('Spike Rate (Hz)');
 legend('Last Rate', '1/ISI(1)', 'Single Spike');
 
 title('Applied Current And Spike Rate');
+grid on;
 
 hold off;
 figure(2);

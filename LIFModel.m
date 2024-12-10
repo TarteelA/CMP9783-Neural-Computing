@@ -1,3 +1,5 @@
+%Author: Tarteel Alkaraan (25847208)
+%Last Updated: 01/12/2024
 %Leaky Integrate And Fire Model With Adaptation Current
 %Part A: Simulate Mode Neuron For 1.5s With Current Pulse Of Iapp:500pA From 0.5s Until 1.0s
 %Clear Previous Runs And Environment
@@ -71,6 +73,7 @@ plot(t, 1e12 * I_app);
 xlabel('Time (ms)');
 ylabel('I app (pA)');
 title('Applied Current');
+grid on;
 
 %Plot Membrane Potential Over Time
 subplot(3,1,2);
@@ -78,6 +81,7 @@ plot(t, 1000 * V);
 xlabel('Time (ms)');
 ylabel('V m (mV)');
 title('Membrane Potential');
+grid on;
 
 %Plot Adaptation Conductance Over Time
 subplot(3,1,3);
@@ -85,6 +89,7 @@ plot(t, G_sra * 1e9);
 xlabel('Time (ms)');
 ylabel('G sra (nS)');
 title('Adaptation Conductance');
+grid on;
 figure();
 
 %Part B: Simulate Model For 5s With Range Of 20 Different Levels Of Constant Applied Current
@@ -97,7 +102,7 @@ T = 5;
 t = 0:dt:T; 
 
 %Applied Current (pA)
-I_app = 240:5:550;
+I_app = 0:5:550;
 I_app = I_app * 1e-12;
 
 %Array For Storing 1/First ISI
@@ -169,6 +174,7 @@ ylabel('Spike Rate (Hz)');
 legend('Last Rate', '1/ISI(1)', 'Single Spike');
 
 title('Applied Current And Spike Rate');
+grid on;
 
 hold off;
 figure(2);

@@ -1,3 +1,5 @@
+%Author: Tarteel Alkaraan (25847208)
+%Last Updated: 01/12/2024
 %Hodgkin Huxley Model As An Oscillator
 %Clear Previous Runs And Environment
 clf;
@@ -205,6 +207,7 @@ subplot(2,1,1)
 plot(time(10:10:end), 1e9 * I_app(10:10:end))
 Title_Str = ['Task ', Task, newline, 'Applied Current'];
 title(Title_Str)
+grid on;
 xlabel('Time (ms)')
 ylabel('I app (nA)')
 axis([0 T -0.5 1.05])
@@ -214,6 +217,7 @@ subplot(2,1,2)
 plot(time(10:10:end), 1e3 * V(10:10:end))
 Title_Str2 = 'Membrane Potential';
 title(Title_Str2)
+grid on;
 xlabel('Time (ms)')
 ylabel('V m (mV)')
 
