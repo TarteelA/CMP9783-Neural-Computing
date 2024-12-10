@@ -29,9 +29,6 @@ V_reset = -80.0e-3;
 %Voltage Range For Spike Uptick
 Delta_th = 2.0e-3;
 
-%Membrane Resistance (MΩ)
-R_m = 100.0e6;
-
 %Membrane Capacitance (uF/cm^2)
 C_m = 100.0e-12;
 
